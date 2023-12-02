@@ -1,17 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
-const path = require('path');
+const path = require('path'); // Import the 'path' module
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = 'mongodb+srv://nannakasaiteja:teja6rC3MFuKG7g7uj4d@saitejanannaka.fqbbn5o.mongodb.net/';
 
 app.use(express.json());
 app.use(cors());
-
-// Serve static files from the 'production' directory
-app.use(express.static(path.join(__dir-name, 'production')));
-
 
 const DATABASE_NAME = 'API_Service';
 
@@ -22,6 +18,15 @@ const COLLECTION_NAMES = {
   'Api_Validation_Automated_TestCases': 'Api_Validation_Automated_TestCases',
   'Api_Validation_Automated_Multiple_TestCases':'Api_Validation_Automated_Multiple_TestCases'
 };
+
+// Serve the entire 'production' directory, including subdirectories like 'build' and 'vendors'
+app.use(express.static(path.join(__dirname, '../production')));
+
+// Serve files from the 'build' folder
+app.use('/build', express.static(path.join(__dirname, '../build')));
+
+// Serve files from the 'vendors' folder
+app.use('/vendors', express.static(path.join(__dirname, '../vendors')));
 
 // Function to connect to MongoDB
 async function connectToMongoDB() {
@@ -35,13 +40,6 @@ async function connectToMongoDB() {
     throw error;
   }
 }
-
-
-// Handle all other routes by serving index.html (for SPA setups)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'production', 'login.html'));
-});
-
 
 // Common logic for all collections
 app.post('/api/storeApiRequest/:collectionName', async (req, res) => {
@@ -82,9 +80,15 @@ app.post('/api/storeApiRequest/:collectionName', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+
+
+
+// Catch-all route to serve the main HTML file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../production/login.html'));
 });
+
 
 
 
