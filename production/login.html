@@ -1,0 +1,330 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--    &lt;!&ndash; Meta, title, CSS, favicons, etc. &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+<!--    <title>Quality Assurance | </title>-->
+
+<!--    &lt;!&ndash; Bootstrap &ndash;&gt;-->
+<!--    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; Font Awesome &ndash;&gt;-->
+<!--    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; NProgress &ndash;&gt;-->
+<!--    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; Animate.css &ndash;&gt;-->
+<!--    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Custom Theme Style &ndash;&gt;-->
+<!--    <link href="../build/css/custom.min.css" rel="stylesheet">-->
+<!--  </head>-->
+
+<!--  <body class="login">-->
+<!--    <div>-->
+<!--      <a class="hiddenanchor" id="signup"></a>-->
+<!--      <a class="hiddenanchor" id="signin"></a>-->
+
+<!--      <div class="login_wrapper">-->
+<!--        <div class="animate form login_form">-->
+<!--          <section class="login_content">-->
+<!--            <form>-->
+<!--              <h1>Login Form</h1>-->
+<!--              <div>-->
+<!--                <input type="text" class="form-control" placeholder="Username" required="" />-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <input type="password" class="form-control" placeholder="Password" required="" />-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <a class="btn btn-default submit" href="index.html">Log in</a>-->
+<!--                <a class="reset_pass" href="#">Lost your password?</a>-->
+<!--              </div>-->
+
+<!--              <div class="clearfix"></div>-->
+
+<!--              <div class="separator">-->
+<!--                <p class="change_link">New to site?-->
+<!--                  <a href="#signup" class="to_register"> Create Account </a>-->
+<!--                </p>-->
+
+<!--                <div class="clearfix"></div>-->
+<!--                <br />-->
+
+<!--                <div>-->
+<!--                  <h1><i class="fa fa-check"></i> Quality Assurance</h1>-->
+<!--                  <p>©2016 All Rights Reserved. Quality Assurance is a Bootstrap 3 template. Privacy and Terms</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--          </section>-->
+<!--        </div>-->
+
+<!--        <div id="register" class="animate form registration_form">-->
+<!--          <section class="login_content">-->
+<!--            <form>-->
+<!--              <h1>Create Account</h1>-->
+<!--              <div>-->
+<!--                <input type="text" class="form-control" placeholder="Username" required="" />-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <input type="email" class="form-control" placeholder="Email" required="" />-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <input type="password" class="form-control" placeholder="Password" required="" />-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <a class="btn btn-default submit" href="index.html">Submit</a>-->
+<!--              </div>-->
+
+<!--              <div class="clearfix"></div>-->
+
+<!--              <div class="separator">-->
+<!--                <p class="change_link">Already a member ?-->
+<!--                  <a href="#signin" class="to_register"> Log in </a>-->
+<!--                </p>-->
+
+<!--                <div class="clearfix"></div>-->
+<!--                <br />-->
+
+<!--                <div>-->
+<!--                  <h1><i class="fa fa-check"></i> Quality Assurance</h1>-->
+<!--                  <p>©2016 All Rights Reserved. Quality Assurance is a Bootstrap 3 template. Privacy and Terms</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--          </section>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </body>-->
+<!--</html>-->
+
+
+<!--#Teja code-->
+
+
+<!DOCTYPE html>
+<!---Coding By CoderGirl!--->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Website Design</title>
+  <!---Custom Css File!--->
+  <link rel="stylesheet" href="../vendors/pandaLogin/pandaStyle.css">
+  <!-- Add the link to the Panda login template CSS -->
+  <link rel="stylesheet" type="text/css" href="../vendors/pandaLogin/pandaLoginCode.css">
+  <style>
+    /* Additional CSS styles for the Panda login template */
+    #panda-login {
+      display: none;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 50%;
+      height: 50%;
+      background-image: url('../vendors/pandaLogin/sandyArt.jpg');
+      background-attachment: fixed;
+      z-index: 2; /* Ensure it's on top of other content */
+    }
+
+    /* Style for the content that will be hidden */
+    .hidden-content {
+      display: none;
+    }
+
+    /* Style for the thank you message */
+    .thank-you {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 100px;
+      color: #fff;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none; /* Initially hidden */
+    }
+
+    /* Style for the alert message */
+    .alert {
+      display: none;
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Additional CSS */
+    .message {
+      display: none;
+      color: yellow; /* Set the default color */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <a href="#">Quality<span> <br>Assurance</span></a>
+      </div>
+      <ul>
+
+        <li><a href="#" onclick="showMessage('Sign Up'); return false;">Sign Up</a></li>
+        <li><a href="#" onclick="showMessage('About'); return false;">About</a></li>
+<!--        <li><a href="#" onclick="showMessage('Services'); return false;">Services</a></li>-->
+        <li><a href="#" onclick="showMessage('Contact'); return false;">Contact</a></li>
+        <div class="message" id="message">
+    <!-- Empty div to display messages -->
+        </div>
+
+<!--        <li><a href="#">Sign Up</a></li>-->
+<!--        <li><a href="#">About</a></li>-->
+<!--&lt;!&ndash;        <li><a href="#">Services</a></li>&ndash;&gt;-->
+<!--        <li><a href="#">Contact</a></li>-->
+      </ul>
+
+    </nav>
+
+
+
+
+    <div class="content" style="text-align: left;">
+      <h2>Hello,<br>welcome to the <br>QA world</h2>
+      <p>I'm A QA Testing Tool. I Will Make Your Testing Easier Way.<br>You Can Run With Me !.</p>
+      <div class="buttons">
+        <button onclick="showPandaLogin()" class="hire">Let's Go</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panda login template (initially hidden) -->
+  <div id="panda-login">
+    <!-- Your Panda login template HTML goes here -->
+    <div class="panda">
+      <div class="ear"></div>
+      <div class="face">
+        <div class="eye-shade"></div>
+        <div class="eye-white">
+          <div class="eye-ball"></div>
+        </div>
+        <div class="eye-shade rgt"></div>
+        <div class="eye-white rgt">
+          <div class="eye-ball"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body"> </div>
+      <div class="foot">
+        <div class="finger"></div>
+      </div>
+      <div class="foot rgt">
+        <div class="finger"></div>
+      </div>
+    </div>
+
+    <form id="login-form">
+      <div class="hand"></div>
+      <div class="hand rgt"></div>
+      <h1>User Login</h1>
+      <div class="form-group">
+        <input required="required" class="form-control" id="username" />
+        <label class="form-label">Username</label>
+      </div>
+      <div class="form-group">
+        <input id="password" type="password" required="required" class="form-control" />
+        <label class="form-label">Password</label>
+        <p class="alert" id="login-alert">Invalid Credentials..!!</p>
+        <button type="button" class="btn" onclick="performLogin()">Sign in</button>
+<!--        <div>-->
+<!--          <button type="button" class="btn-signup">Sign up</button>-->
+<!--        </div>-->
+
+      </div>
+    </form>
+  </div>
+
+  <div class="thank-you" id="thank-you-message">Thank you for logging in!</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../vendors/pandaLogin/pandaLoginScript.js"></script>
+  <script>
+    function showPandaLogin() {
+      // Hide only the content inside the div with class "content"
+      var content = document.querySelector('.content');
+      content.classList.add('hidden-content');
+
+      // Show the Panda login template
+      document.getElementById('panda-login').style.display = 'block';
+    }
+
+    function performLogin() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Perform the login validation
+      if (username === 'saitejachowdary@gmail.com' && password === 'Teja@123') {
+        // If the credentials are correct, redirect to another page
+        window.location.href = 'guideLines.html'; // Replace 'guideLines.html' with the desired page URL
+      } else {
+        // If the credentials are incorrect, show an alert
+        var alert = document.getElementById('login-alert');
+        alert.style.display = 'block';
+
+        // Reset the form after displaying the alert
+        setTimeout(function () {
+          alert.style.display = 'none';
+          document.querySelector('#login-form').reset();
+        }, 3000);
+      }
+    }
+  </script>
+
+
+
+
+  <script>
+    function showMessage(section) {
+      var messageDiv = document.getElementById('message');
+      var messageText = '';
+
+      // Determine message based on section clicked
+      switch (section) {
+        case 'Sign Up':
+          messageText = "Currently we are not Processing Sign Up";
+          break;
+        case 'About':
+          messageText = "This is an API Service Tool.";
+          break;
+        case 'Contact':
+          messageText = "Please send your query to - nannaka.saiteja@gmail.com";
+          break;
+        default:
+          messageText = "No specific message for this section.";
+          break;
+      }
+
+      // Toggle the display of the message
+      if (messageDiv.style.display === 'block' && messageDiv.innerHTML === '<p>' + messageText + '</p>') {
+        messageDiv.style.display = 'none'; // Hide the message if already displayed
+      } else {
+        // Display the message
+        messageDiv.style.display = 'block';
+        messageDiv.innerHTML = '<p>' + messageText + '</p>';
+      }
+    }
+  </script>
+
+
+
+
+</body>
+</html>

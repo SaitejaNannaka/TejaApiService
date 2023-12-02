@@ -1,0 +1,149 @@
+/* Custom CSS styles for the modified HTML */
+
+/* CSS to fix header and footer at the top and bottom of the page */
+
+
+
+
+.custom-header {
+font-weight: 600;
+font-size: 26px;
+background: #fff;
+color: #008080;
+padding: 10px;
+line-height: 1.7em;
+box-shadow: 0 2px 10px 0 #cac9c9;
+text-align: center;
+user-select: none;
+cursor: pointer;
+border-left: 24px solid #008080;
+border-right: 24px solid #008080;
+border-radius: 55px;
+}
+
+
+
+.custom-footer {
+    text-align: center;
+    background-color: #008080;
+    color: white;
+    padding: 5px;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+
+
+
+.custom-header p {
+    font-size: 16px;
+}
+
+/* Main section styles */
+.custom-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Request form styles */
+.custom-select, .custom-input, .custom-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.custom-label {
+    font-size: 18px;
+    color: #008080;
+    margin-top: 10px;
+    display: block;
+}
+
+
+.rest-type-heading{
+    font-size: 20px;
+    font-weight: bold;
+    color: #008080;
+    margin-top: 10px;
+    display: block;
+
+}
+
+.Tool-credit{
+    font-size: 12px;
+    color: #008080;
+}
+
+.css-margin {
+  margin-top: 12px;
+}
+
+
+/* Stylish Button for .custom-button-validate */
+.custom-button-validate {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 10px 24px; /* Adjust the padding to change button size */
+  font-size: 13px; /* Adjust the font size */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #008080; /* Updated Background color to #008080 */
+  color: #ffffff; /* Text color */
+  border: 2px solid #008080; /* Updated Border color to #008080 */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+
+  /* Add more styles here, such as box-shadow for a raised effect */
+}
+
+/* Hover effect */
+.custom-button-validate:hover {
+  background-color: #006666; /* Background color on hover */
+  border-color: #006666; /* Border color on hover */
+  color: #ffffff; /* Text color on hover */
+}
+
+
+
+/* Test case results styles */
+.custom-results {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+
+
+/* CSS styles for "Modified Request Body:" text */
+.request-body h4 {
+    color: red; /* You can choose the color you prefer */
+}
+
+
+/* CSS styles for the test-case name */
+.test-case h4 {
+    font-weight: bold;
+    color: #800080; /* Adjust the color as needed */
+}
+
+/* CSS styles for the separator line */
+.separator {
+    margin-top: 10px; /* Adjust the margin as needed to control the gap size */
+    color: #999; /* Color of the separator line */
+    font-size: 12px; /* Font size of the separator line */
+}
+
+/* CSS styles for the gap between test case responses */
+.response-gap {
+    height: 20px; /* Adjust the gap size as needed */
+}
+
