@@ -39,7 +39,7 @@ async function connectToMongoDB() {
 
 // Handle all other routes by serving index.html (for SPA setups)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dir-name, 'production', 'login.html'));
+  res.sendFile(path.join(__dirname, 'production', 'login.html'));
 });
 
 
