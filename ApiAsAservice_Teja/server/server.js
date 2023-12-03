@@ -83,19 +83,19 @@ app.post('/api/storeApiRequest/:collectionName', async (req, res) => {
 
 
 
-app.use(express.static(path.join(__dirname, 'production')));
-
-// Route to serve login.html as the default page
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../production', 'login.html'));
-});
-
+//app.use(express.static(path.join(__dirname, 'production')));
+//
+//// Route to serve Alogin.html as the default page
+//app.get('/', (req, res) => {
+//  res.sendFile(path.join(__dirname, '../production', 'Alogin.html'));
+//});
+//
 
 
 
 // Catch-all route to serve the main HTML file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../production/login.html'));
+  res.sendFile(path.join(__dirname, '../production/Alogin.html'));
 });
 
 
