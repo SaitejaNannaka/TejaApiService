@@ -340,7 +340,7 @@ h1 {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 5px;
+  top: -8px;
   transition: .3s;
 }
 
@@ -442,4 +442,10 @@ h1 {
   40%, 80% {
     left: -20px;
   }
+}
+
+
+.login-heading {
+margin:8px;
+
 }
